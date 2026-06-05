@@ -1,6 +1,3 @@
-// let  result = ""
-// let screen = result
-
 const calculate = document.getElementById("calculate")
 const buttons = document.getElementsByClassName("number")
 const display = document.getElementById("display")
@@ -27,9 +24,6 @@ for (let i = 0; i < operators.length; i++) {
             return
         }
         console.log(op.target.value)
-        // opr = op.target.value
-        // firstValue = screen
-        // screen = ""
         expression += op.target.value
         display.textContent = expression
     })
@@ -46,7 +40,6 @@ calculate.addEventListener("click", function soln() {
     let typedExpression = expression
     typedExpression = typedExpression.replaceAll("^","**")
     let result = eval(typedExpression)
-    // expression = screen
     display.textContent = Number(result.toFixed(5))
     expression = result.toString()
 })
@@ -76,7 +69,3 @@ backspace.addEventListener("click", function () {
     expression = expression.slice(0, -1)
     display.textContent = expression
 })
-
-
-
-// all-clear.addEventListener()
