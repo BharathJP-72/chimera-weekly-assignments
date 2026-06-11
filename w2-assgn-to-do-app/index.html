@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="todo-container">
+        <div>
+            <h1>To-Do's</h1>
+        </div>
+        <div class="tasks-container">
+            <p id="empty-state">
+                No tasks yet!
+            </p>
+            <ul id="task-list">
+
+            </ul>
+            
+            <div id="task-form-container" class="hidden">
+                <form id="task-form">
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="Enter task..."
+                        maxlength="25"
+                    >
+                    <button type="submit" id="save-task-btn">
+                        Save
+                    </button>
+                    <button type="button" id="cancel-task-btn">
+                        Cancel
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="add-task-wrapper">
+            <button id="add-task-btn">+</button>
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
