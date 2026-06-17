@@ -1,0 +1,30 @@
+/* index.css */
+
+/* 1. Clear out default browser gaps and fix sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. Style the overall page background and text font */
+body {
+  font-family: sans-serif;
+  background-color: #f4f5f7; /* Soft gray so your white card stands out */
+  color: #1a1a1a;
+}
+
+/* 3. Center everything inside your React application */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+/* 4. Simple dashboard title spacing */
+h1 {
+  margin-bottom: 24px;
+  text-align: center;
+}

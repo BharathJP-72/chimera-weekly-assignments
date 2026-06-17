@@ -1,0 +1,126 @@
+.activity-card {
+
+  background-color: white;
+
+  padding: 20px;
+
+  border-radius: 10px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+  text-align: center;
+}
+
+.activity-card span {
+
+  font-size: 2rem;
+
+  display: block;
+
+  margin-bottom: 10px;
+}
+
+.activity-card h2 {
+
+  margin-bottom: 10px;
+
+  color: #222;
+}
+
+.activity-card p {
+
+  color: #666;
+
+  margin-bottom: 15px;
+}
+
+.activity-card h3 {
+
+  margin-bottom: 20px;
+
+  color: #444;
+}
+
+.button-group {
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.button-group button {
+
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  background-color: #4caf50;
+
+  color: white;
+
+  transition: 0.2s;
+}
+
+.button-group button:hover {
+
+  opacity: 0.85;
+}
+
+.activity-card {
+
+  transition: transform 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+
+.activity-card:hover {
+
+  transform: translateY(-6px);
+
+  box-shadow: 0 20px 20px rgba(76, 175, 80, 0.35);
+
+}
+
+.status-text {
+
+    font-weight: 600;
+
+    margin: 15px 0;
+
+}
+
+.pomodoro-btn {
+
+  width: 100%;
+
+  margin-top: 15px;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 5px;
+
+  background-color: #d84315;
+
+  color: white;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+
+.pomodoro-btn:hover {
+
+  background-color: #bf360c;
+
+}
