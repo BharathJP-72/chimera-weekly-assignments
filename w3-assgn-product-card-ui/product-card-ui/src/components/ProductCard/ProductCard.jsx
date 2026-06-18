@@ -1,8 +1,15 @@
+import { Star, IndianRupee, Heart, ShoppingCart, CheckCircle, XCircle } from 'lucide-react'
 import './ProductCard.css'
 
-function ProductCard({ product }) {
-
+function ProductCard({ 
+    product,
+    cart,
+    setCart,
+    wishlist,
+    setWishlist
+}) {
     const {
+        id,
         title,
         category,
         image,
@@ -11,6 +18,25 @@ function ProductCard({ product }) {
         discount,
         inStock
     } = product
+
+    const isWishlisted = wishlist.includes(id)
+    const isInCart = cart.includes(id)
+
+    const toggleWishlist = () => {
+        if (isWishlisted) {
+            setWishlist(wishlist.filter(itemId => itemId !== id))
+        } else {
+            setWishlist([...wishlist, id])
+        }
+    }
+
+    const toggleCart = () => {
+        if (isInCart) {
+            setCart(cart.filter(itemId => itemId !== id))
+        } else {
+            setCart([...cart, id])
+        }
+    }
 
     return(
          <div className='product-card'>
@@ -29,55 +55,44 @@ function ProductCard({ product }) {
                     {category}
                 </h3>
                 <p className='rating'>
-
-                ⭐ {rating} / 5
-
+                    <Star size={16} fill="currentColor" /> {rating} / 5
                 </p>
-
 
                 <div className='price-row'>
-
-                <span>
-
-                    💰 ₹{price}
-
-                </span>
-
-                <span className='discount-badge'>
-
-                    {discount}% OFF
-
-                </span>
-
+                    <span>
+                        <IndianRupee size={20} className="rupee-icon" />{price}
+                    </span>
+                    <span className='discount-badge'>
+                        {discount}% OFF
+                    </span>
                 </div>
+                
                 <p className='stock-status'>
-
-                {
-
-                    inStock
-
-                    ?
-
-                    '🟢 In Stock'
-
-                    :
-
-                    '🔴 Out Of Stock'
-
-                }
-
+                    {inStock ? (
+                        <><CheckCircle size={16} /> In Stock</>
+                    ) : (
+                        <><XCircle size={16} /> Out Of Stock</>
+                    )}
                 </p>
             </div>
+            
             <div className='button-group'>
-                <button>
-                    🤍 Wishlist
+                <button 
+                    className={isWishlisted ? 'wishlist-btn active' : 'wishlist-btn'}
+                    onClick={toggleWishlist}
+                >
+                    <Heart size={18} fill={isWishlisted ? "currentColor" : "none"} /> 
+                    {isWishlisted ? 'Wishlisted' : 'Wishlist'}
                 </button>
-                <button>
-                    🛒 Add To Cart
+                <button 
+                    className={isInCart ? 'cart-btn active' : 'cart-btn'}
+                    onClick={toggleCart}
+                >
+                    <ShoppingCart size={18} /> 
+                    {isInCart ? 'Remove' : 'Add To Cart'}
                 </button>
             </div>
         </div>
-
     )
 }
 
