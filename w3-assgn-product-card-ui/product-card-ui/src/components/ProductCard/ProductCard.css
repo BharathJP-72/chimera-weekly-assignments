@@ -1,0 +1,213 @@
+.product-card {
+
+    background-color: white;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    max-width: 340px;
+
+    margin: auto;
+    
+    height: 600px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    box-shadow:
+
+        0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition:
+
+        transform 0.25s ease,
+
+        box-shadow 0.25s ease;
+    
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+
+        0 12px 28px rgba(0, 0, 0, 0.15);
+
+}
+
+
+.product-image {
+
+    max-width: 85%;
+
+    max-height: 180px;
+
+    object-fit: contain;
+}
+
+.image-container {
+
+    height: 220px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* ---------- TEXT ---------- */
+
+.product-details h2 {
+
+    font-size: 1.25rem;
+
+    color: #222;
+
+    margin-bottom: 8px;
+}
+
+
+.product-details h3 {
+
+    font-size: 0.95rem;
+
+    color: #777;
+
+    font-weight: 500;
+
+    margin-bottom: 15px;
+}
+
+
+.rating {
+
+    color: #666;
+
+    margin-bottom: 15px;
+}
+
+
+/* ---------- PRICE ROW ---------- */
+
+.price-row {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.price-row span:first-child {
+
+    font-size: 1.25rem;
+
+    font-weight: 700;
+}
+
+
+.discount-badge {
+
+    background-color: #d4edda;
+
+    color: #2e7d32;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 0.85rem;
+
+    font-weight: 600;
+}
+
+
+/* ---------- STOCK ---------- */
+
+.stock-status {
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+
+/* ---------- BUTTONS ---------- */
+
+.button-group {
+
+    margin-top: auto;
+}
+
+
+.button-group button {
+
+    flex: 1;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    transition:
+
+        transform 0.2s ease,
+
+        background-color 0.2s ease;
+}
+
+
+.button-group button:first-child {
+
+    background-color: #eceff1;
+
+    color: #333;
+}
+
+
+.button-group button:last-child {
+
+    background-color: #1976d2;
+
+    color: white;
+}
+
+
+.button-group button:hover {
+
+    transform: scale(1.03);
+}
+
+
+.button-group button:first-child:hover {
+
+    background-color: #dfe4e8;
+}
+
+
+.button-group button:last-child:hover {
+
+    background-color: #125ea7;
+}
