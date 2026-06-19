@@ -33,7 +33,7 @@ ActivityGrid.propTypes = {
             id: PropTypes.number.isRequired,
             title: PropTypes.string.isRequired,
             description: PropTypes.string.isRequired,
-            icon: PropTypes.string,
+            icon: PropTypes.elementType,
             target: PropTypes.number.isRequired,
             current: PropTypes.number.isRequired
             

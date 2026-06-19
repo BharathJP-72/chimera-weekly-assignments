@@ -1,9 +1,11 @@
+import { Dumbbell, Brain, BookOpen, Timer } from 'lucide-react';
+
 const activities = [
   {
     id: 1,
     title: "Exercise",
     description: "Workout everyday, be healthy",
-    icon: "💪",
+    icon: Dumbbell,
     target: 10,
     current: 0
   },
@@ -11,7 +13,7 @@ const activities = [
     id: 2,
     title: "Meditation",
     description: "Inner peace",
-    icon: "🧘",
+    icon: Brain,
     target: 10,
     current: 0
   },
@@ -19,7 +21,7 @@ const activities = [
     id: 3,
     title: "Reading",
     description: "Learn something new",
-    icon: "📚",
+    icon: BookOpen,
     target: 10,
     current: 0
   },
@@ -27,7 +29,7 @@ const activities = [
     id: 4,
     title: "Pomodoro",
     description: "Time yourself",
-    icon:"🍅",
+    icon: Timer,
     target: 10,
     current: 0
   }

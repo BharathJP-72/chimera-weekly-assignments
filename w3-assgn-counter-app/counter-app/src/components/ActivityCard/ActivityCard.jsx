@@ -2,6 +2,7 @@ import ProgressBar from '../ProgressBar/ProgressBar'
 import './ActivityCard.css'
 import {toast} from 'react-toastify'
 import PropTypes from 'prop-types'
+import { SmilePlus, Smile, Frown } from 'lucide-react'
 
 
 function ActivityCard({
@@ -22,25 +23,29 @@ function ActivityCard({
 
             let mood 
             let statusColor
+            let MoodIcon
 
             if (percentage >= 75) {
 
-                mood = '😎 Excellent'
+                mood = 'Excellent'
                 statusColor = '#2e7d32'
+                MoodIcon = SmilePlus
 
             }
 
             else if (percentage >= 35) {
 
-                mood = '🙂 Keep Going'
+                mood = 'Keep Going'
                 statusColor = '#ef6c00'
+                MoodIcon = Smile
 
             }
 
             else {
 
-                mood = '😴 Behind Schedule'
+                mood = 'Behind Schedule'
                 statusColor = '#c62828'
+                MoodIcon = Frown
 
             }
 
@@ -60,7 +65,12 @@ function ActivityCard({
         
         <div className='activity-card'>
                 
-                <span> {icon} </span>
+                <span className='activity-icon'> 
+                    {icon && (() => {
+                        const IconComponent = icon;
+                        return <IconComponent size={32} />;
+                    })()}
+                </span>
 
                 <h2>{title}</h2>
                 <p>
@@ -75,9 +85,14 @@ function ActivityCard({
                 <p
                     className='status-text'
                     style={{
-                        color: statusColor
+                        color: statusColor,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '6px'
                     }}
                 >
+                    <MoodIcon size={20} />
                     {mood}
                 </p>
                 
@@ -115,7 +130,7 @@ ActivityCard.propTypes = {
         id: PropTypes.number.isRequired,
         title: PropTypes.string.isRequired,
         description: PropTypes.string.isRequired,
-        icon: PropTypes.string,
+        icon: PropTypes.elementType,
         target: PropTypes.number.isRequired,
         current: PropTypes.number.isRequired
     }).isRequired,
