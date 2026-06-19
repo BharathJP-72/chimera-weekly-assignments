@@ -1,6 +1,8 @@
 import ProgressBar from '../ProgressBar/ProgressBar'
 import './ActivityCard.css'
 import {toast} from 'react-toastify'
+import PropTypes from 'prop-types'
+
 
 function ActivityCard({
     activity, 
@@ -106,6 +108,21 @@ function ActivityCard({
                 
         </div>
     )
+}
+
+ActivityCard.propTypes = {
+    activity: PropTypes.shape({
+        id: PropTypes.number.isRequired,
+        title: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        icon: PropTypes.string,
+        target: PropTypes.number.isRequired,
+        current: PropTypes.number.isRequired
+    }).isRequired,
+    increment: PropTypes.func.isRequired,
+    decrement: PropTypes.func.isRequired,
+    reset: PropTypes.func.isRequired
+
 }
 
 export default ActivityCard

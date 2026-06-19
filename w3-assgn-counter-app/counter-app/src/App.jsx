@@ -1,5 +1,4 @@
 import './App.css'
-// import activities from './data/activities'
 import ActivityGrid from './components/ActivityGrid/ActivityGrid'
 import useActivities from './hooks/useActivities'
 import { ToastContainer } from 'react-toastify'
@@ -34,5 +33,7 @@ function App() {
     </>
   )
 }
+
+
 
 export default App
